@@ -2,20 +2,22 @@
 
 namespace App\Http\Controllers\Voyager;
 
-use TCG\Voyager\Http\Controllers\VoyagerBaseController;
 use App\Order;
-use Validator;
 use App\Product;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Http\Request;
-use TCG\Voyager\Facades\Voyager;
+use Illuminate\Support\Facades\DB;
 use TCG\Voyager\Events\BreadDataAdded;
 use TCG\Voyager\Events\BreadDataUpdated;
+use TCG\Voyager\Facades\Voyager;
+use TCG\Voyager\Http\Controllers\VoyagerBaseController;
+use Validator;
 
 
 class OrdersController extends VoyagerBaseController {
 
 
-    
+
 
     //***************************************
     //                _____

@@ -14129,11 +14129,12 @@ li a:hover {
 }
 
 .hero-image {
-  background-image: url(/images/cover.jpg?1035b35ebd5ebc116a5bb25bb4d1813b);
+  /* background-image: url(/images/cover.jpg?1035b35ebd5ebc116a5bb25bb4d1813b); */
+  background-image: url("https://img95.lovepik.com/photo/40107/3064.gif_wh860.gif");
   display: flex;
   flex-direction: column;
   min-height: 28em;
-  height: 50%;
+  height: 20%;
   align-self: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -14182,4 +14183,44 @@ li a:hover {
   cursor: pointer;
 }
 
+/* Custom Styles */
 
+.featured-products-section {
+    background: linear-gradient(135deg, #1e3c72, #41aeb500); /* Blue gradient */
+    padding: 50px 20px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.header {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Frame effect for product images */
+.product-frame {
+    border: 5px solid #fff; /* White border */
+    border-radius: 10px;
+    padding: 5px;
+    background: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.product-frame:hover {
+    border-color: #ffcc00; /* Gold border on hover */
+    transform: scale(1.05);
+}
+
+/* Styling for cards */
+.card {
+    background: rgba(255, 255, 255, 0.1); /* Slight transparency */
+    border-radius: 10px;
+    padding: 10px;
+    backdrop-filter: blur(10px); /* Glass effect */
+}
+
+.card-body {
+    color: white;
+}
