@@ -25,3 +25,85 @@
     align-items: center;
     justify-content: center;
 }
+
+// Hot Deals Style
+
+/* Background and Section Styling */
+.hot-deals {
+    background: linear-gradient(135deg, #343a40, #343a40); /* Add a gradient for an attractive color scheme */
+    padding: 40px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styling */
+.hot-deals .header {
+    font-size: 2em;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover Animation on Product */
+.hot-deals .product {
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Product */
+.hot-deals .product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover Effect for Image */
+.hot-deals .product .card-img-top {
+    transition: transform 0.3s ease;
+}
+
+.hot-deals .product:hover .card-img-top {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Card Content Styling */
+.hot-deals .card-body {
+    transition: background-color 0.3s ease;
+}
+
+.hot-deals .product:hover .card-body {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Styling for the product title */
+.hot-deals .card-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Styling for Price */
+.hot-deals .float-right {
+    font-weight: bold;
+    color: #ff6347; /* Attractive price color */
+}
+
+/* Adding a "pulse" animation to the header */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.hot-deals .header {
+    animation: pulse 1.5s infinite;
+}
+

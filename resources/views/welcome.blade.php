@@ -7,7 +7,7 @@
     <div class="hero-content">
         <div class="col-md-4 hero-text">
             <h3>
-                Welcome to the site Welcome to the site
+                Welcome to the site
             </h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, assumenda. Culpa, libero.</p>
             <button class="btn custom-border my-2 my-sm-0">Shop</button>
@@ -35,7 +35,7 @@
                             <img src="{{ productImage($product->image) }}" class="card-img-top img-fluid product-frame" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">
-                                    {{ $product->name }}
+                                    {{ \Illuminate\Support\Str::limit($product->name, 15, '...') }}
                                     <span class="float-right">$ {{ format($product->price) }}</span>
                                 </h5>
                             </div>
@@ -59,29 +59,26 @@
     </div>
     <hr>
     <h2 class="header text-center">Hot Sales</h2>
-    <!-- start products row -->
-    <div class="row">
-        @foreach ($hotProducts as $product)
-            <!-- start single product -->
-            <div class="col-md-6 col-sm-12 col-lg-4 product">
-                <a href="{{ route('shop.show', $product->slug) }}" class="custom-card">
-                    <div class="card view overlay zoom">
-                        <img src="{{ productImage($product->image) }}" class="card-img-top img-fluid" alt="...">
-                        <div class="card-body">
-                            <h5 style="color: black" class="card-title">{{ $product->name }}<span class="float-right">$ {{ format($product->price) }}</span></h5>
-                            {{-- <div class="product-actions" style="display: flex; align-items: center; justify-content: center">
-                                <a class="cart" href="#" style="margin-right: 1em"><i style="color:blue; font-size: 1.3em" class="fas fa-cart-plus"></i></a>
-                                <a class="like" href="#" style="margin-right: 1em"><i style="color:blue; font-size: 1.3em" class="fa fa-thumbs-up"></i></a>
-                                <a class="heart" href="#"><i style="color:blue; font-size: 1.3em" class="fa fa-heart-o"></i></a>
-                            </div> --}}
+        <!-- start products row -->
+        <div class="row hot-deals">
+            @foreach ($hotProducts as $product)
+                <!-- start single product -->
+                <div class="col-md-6 col-sm-12 col-lg-4 product">
+                    <a href="{{ route('shop.show', $product->slug) }}" class="custom-card">
+                        <div class="card view overlay zoom">
+                            <img src="{{ productImage($product->image) }}" class="card-img-top img-fluid" alt="...">
+                            <div class="card-body">
+                                <h5 style="color: black" class="card-title">{{ $product->name }}<span class="float-right">$ {{ format($product->price) }}</span></h5>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>
-            <!-- end single product -->
-        @endforeach
-    </div>
+                    </a>
+                </div>
+                <!-- end single product -->
+            @endforeach
+        </div>
+
     <!-- end products row -->
+    <br>
 </div>
 <!-- end page content -->
 
