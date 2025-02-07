@@ -47,48 +47,9 @@
         </div>
     </section>
 
-    <style>
-        /* Unique background for Featured Products section */
-        .featured-products-section {
-            background: linear-gradient(135deg, #1e3c72, #2a5298); /* Blue gradient */
-            padding: 50px 20px;
-            border-radius: 15px;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-            color: white;
-        }
+    {{-- <style>
 
-        .header {
-            font-size: 2em;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-
-        /* Frame effect for product images */
-        .product-frame {
-            border: 5px solid #fff; /* White border */
-            border-radius: 10px;
-            padding: 5px;
-            background: white;
-            transition: all 0.3s ease-in-out;
-        }
-
-        .product-frame:hover {
-            border-color: #ffcc00; /* Gold border on hover */
-            transform: scale(1.05);
-        }
-
-        /* Styling for cards */
-        .card {
-            background: rgba(255, 255, 255, 0.1); /* Slight transparency */
-            border-radius: 10px;
-            padding: 10px;
-            backdrop-filter: blur(10px); /* Glass effect */
-        }
-
-        .card-body {
-            color: white; /* Make text readable on dark background */
-        }
-    </style>
+    </style> --}}
 
     <!-- end products row -->
     <div class="show-more">
@@ -107,7 +68,7 @@
                     <div class="card view overlay zoom">
                         <img src="{{ productImage($product->image) }}" class="card-img-top img-fluid" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">{{ $product->name }}<span class="float-right">$ {{ format($product->price) }}</span></h5>
+                            <h5 style="color: black" class="card-title">{{ $product->name }}<span class="float-right">$ {{ format($product->price) }}</span></h5>
                             {{-- <div class="product-actions" style="display: flex; align-items: center; justify-content: center">
                                 <a class="cart" href="#" style="margin-right: 1em"><i style="color:blue; font-size: 1.3em" class="fas fa-cart-plus"></i></a>
                                 <a class="like" href="#" style="margin-right: 1em"><i style="color:blue; font-size: 1.3em" class="fa fa-thumbs-up"></i></a>
